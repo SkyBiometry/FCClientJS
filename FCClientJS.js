@@ -5,12 +5,12 @@ function FCClientJS(apiKey, apiSecret)
 
 	var _apiKey = null;
 	var _apiSecret = null;
-	
+
 	if (isDefined(apiKey))
 		_apiKey = apiKey;
 	if (isDefined(apiSecret))
 		_apiSecret = apiSecret;
-	
+
 	// Public methods
 
 	this.facesDetect = function (urls, files, options, callback) {
@@ -24,6 +24,7 @@ function FCClientJS(apiKey, apiSecret)
 		if (isDefined(options)) {
 			if (isDefined(options.detector) && !isEmpty(options.detector)) params.detector = options.detector;
 			if (isDefined(options.attributes) && !isEmpty(options.attributes)) params.attributes = options.attributes;
+			if (isDefined(options.detect_all_feature_points) && !isEmpty(options.detect_all_feature_points)) params.detect_all_feature_points = options.detect_all_feature_points;
 		}
 
 		CallMethod(method, files, params, callback);
@@ -45,6 +46,7 @@ function FCClientJS(apiKey, apiSecret)
 			if (isDefined(options.threshold) && !isEmpty(options.threshold)) params.threshold = options.threshold;
 			if (isDefined(options.limit) && !isEmpty(options.limit)) params.limit = options.limit;
 			if (isDefined(options.returnSimilarities) && !isEmpty(options.returnSimilarities)) params.returnSimilarities = options.returnSimilarities;
+			if (isDefined(options.detect_all_feature_points) && !isEmpty(options.detect_all_feature_points)) params.detect_all_feature_points = options.detect_all_feature_points;
 		}
 
 		CallMethod(method, files, params, callback);
@@ -63,6 +65,7 @@ function FCClientJS(apiKey, apiSecret)
 			if (isDefined(options.detector) && !isEmpty(options.detector)) params.detector = options.detector;
 			if (isDefined(options.attributes) && !isEmpty(options.attributes)) params.attributes = options.attributes;
 			if (isDefined(options.limit) && !isEmpty(options.limit)) params.limit = options.limit;
+			if (isDefined(options.detect_all_feature_points) && !isEmpty(options.detect_all_feature_points)) params.detect_all_feature_points = options.detect_all_feature_points;
 		}
 
 		CallMethod(method, files, params, callback);
