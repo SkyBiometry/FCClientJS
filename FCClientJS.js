@@ -146,7 +146,7 @@ function FCClientJS(apiKey, apiSecret)
 
 	this.tagsGet = function (userIds, urls, photoIds, options, callback) {
 		var method = "tags/get";
-		var params = { uids: userids, urls: urls, pids: photoIds };
+		var params = { uids: userIds, urls: urls, pids: photoIds };
 
 		if (isDefined(options)) {
 			if (isDefined(options.order) && !isEmpty(options.order)) params.order = options.order;
