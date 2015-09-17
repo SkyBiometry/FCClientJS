@@ -45,7 +45,7 @@ function FCClientJS(apiKey, apiSecret)
 			if (isDefined(options.attributes) && !isEmpty(options.attributes)) params.attributes = options.attributes;
 			if (isDefined(options.threshold) && !isEmpty(options.threshold)) params.threshold = options.threshold;
 			if (isDefined(options.limit) && !isEmpty(options.limit)) params.limit = options.limit;
-			if (isDefined(options.returnSimilarities) && !isEmpty(options.returnSimilarities)) params.returnSimilarities = options.returnSimilarities;
+			if (isDefined(options.return_similarities) && !isEmpty(options.return_similarities)) params.return_similarities = options.return_similarities;
 			if (isDefined(options.detect_all_feature_points) && !isEmpty(options.detect_all_feature_points)) params.detect_all_feature_points = options.detect_all_feature_points;
 		}
 
